@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    tools {
+        terraform 'terraform' // This will install Terraform automatically in Jenkins
+    }
     environment {
         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp.json')
     }
